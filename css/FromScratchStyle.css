@@ -1,0 +1,48 @@
+
+
+#top{
+    text-decoration: underline;
+}
+
+.emphasizeText{
+    font-style: italic;
+    color: rgb(86, 79, 5);
+}
+
+body{
+    background-color:rgb(245, 231, 163);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align:center;
+    border: 5px solid rgb(223, 181, 74);
+    margin: 50px;
+    padding: 20px;
+}
+img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px; /* optional: makes them look nicer */
+}
+.common a {
+    color: orange;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.common a:hover {
+    color: darkorange;
+}
+p {
+    font-size: 14px;
+    font-weight: normal;
+}
+ol, ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.tableau-container {
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}

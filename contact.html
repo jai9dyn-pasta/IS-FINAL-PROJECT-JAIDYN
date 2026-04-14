@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Game Style -->
+    <link href="css/gameStyle.css" rel="stylesheet">
+
+    <title>Recipe Game</title>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Jaidyn Bundy</a>
+
+        <ul class="navbar-nav ms-auto flex-row gap-3">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="post.html">Scratch Page Pasta</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Game</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- GAME AREA -->
+<main class="game-container">
+
+    <h1>🍽️ Recipe Generator</h1>
+    <p>Pick a mood and get a silly meal idea ✨</p>
+
+    <!-- DROPDOWN -->
+    <select id="themeSelect">
+        <option value="girldinner">🍓 Girl Dinner</option>
+        <option value="rush">⏱️ In a Rush</option>
+        <option value="bulking">💪 Bulking Mode</option>
+        <option value="comfort">🧸 Comfort Food</option>
+        <option value="surprise">🎲 Surprise Me</option>
+    </select>
+
+    <button onclick="generateRecipe()">Generate Recipe</button>
+
+    <!-- OUTPUT -->
+    <div id="recipeBox">
+        <h2 id="recipeTitle"></h2>
+        <p id="ingredients"></p>
+        <p id="instructions"></p>
+    </div>
+
+</main>
+
+<!-- SCRIPT -->
+<script>
+const recipes = {
+    girldinner: [
+        {
+            title: "🍓 Girl Dinner Plate",
+            ingredients: "Crackers, cheese, grapes, chocolate, vibes",
+            instructions: "Arrange everything on a plate. No cooking. Romanticize it."
+        },
+        {
+            title: "🥑 Avocado Toast Energy",
+            ingredients: "Bread, avocado, salt, lemon, confidence",
+            instructions: "Mash avocado, spread on toast, pretend you're in a Pinterest photo."
+        }
+    ],
+
+    rush: [
+        {
+            title: "⏱️ Microwave Pasta Hack",
+            ingredients: "Pasta, water, jar sauce, desperation",
+            instructions: "Microwave pasta, drain carefully, dump sauce, survive."
+        },
+        {
+            title: "🥪 2-Minute Sandwich",
+            ingredients: "Bread, turkey, cheese, anything nearby",
+            instructions: "Stack it fast. Eat while standing."
+        }
+    ],
+
+    bulking: [
+        {
+            title: "💪 Protein Power Bowl",
+            ingredients: "Chicken, rice, eggs, avocado, hot sauce",
+            instructions: "Cook everything, mix into a massive bowl, eat like it's your job."
+        },
+        {
+            title: "🥩 Gym Bro Steak Plate",
+            ingredients: "Steak, potatoes, butter, salt",
+            instructions: "Cook steak, eat aggressively, repeat tomorrow."
+        }
+    ],
+
+    comfort: [
+        {
+            title: "🧸 Mac & Cheese Hug",
+            ingredients: "Macaroni, cheese, milk, butter",
+            instructions: "Cook, mix, melt. Eat while watching your comfort show."
+        },
+        {
+            title: "🍜 Cozy Noodle Soup",
+            ingredients: "Broth, noodles, chicken, carrots",
+            instructions: "Simmer slowly and heal emotionally."
+        }
+    ],
+
+    surprise: [
+        {
+            title: "🎲 Mystery Bowl",
+            ingredients: "Whatever is in your fridge",
+            instructions: "Mix it all. Do not question it."
+        },
+        {
+            title: "🍕 Chaos Pizza",
+            ingredients: "Bread, cheese, random toppings",
+            instructions: "Bake until it looks edible-ish."
+        }
+    ]
+};
+
+function generateRecipe() {
+    const theme = document.getElementById("themeSelect").value;
+    const options = recipes[theme];
+    const random = options[Math.floor(Math.random() * options.length)];
+
+    document.getElementById("recipeTitle").innerText = random.title;
+    document.getElementById("ingredients").innerText = "Ingredients: " + random.ingredients;
+    document.getElementById("instructions").innerText = "Instructions: " + random.instructions;
+}
+</script>
+
+</body>
+</html>

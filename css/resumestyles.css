@@ -1,0 +1,171 @@
+/* ===== WHITE + BLUE PROFESSIONAL RESUME ===== */
+
+/* Page background */
+body {
+    background: #f5f7fb;
+    color: #1f2937;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Main container */
+main .col-md-10 {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Section headers */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a; /* deep professional blue */
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #dbeafe;
+}
+
+/* Paragraph text */
+main p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #374151;
+    margin-bottom: 1rem;
+}
+
+/* Strong emphasis */
+strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+/* ===== SECTION CARDS ===== */
+section {
+    background: #ffffff;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* ===== BULLET POINT STYLE ===== */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    padding: 6px 0;
+    padding-left: 18px;
+    position: relative;
+    color: #374151;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb; /* blue bullet */
+    font-weight: bold;
+}
+
+/* ===== OPTIONAL TAG STYLE (skills) ===== */
+.tag {
+    display: inline-block;
+    background: #e0ecff;
+    color: #1d4ed8;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin: 4px 4px 0 0;
+}
+
+/* Navbar (clean and consistent) */
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #1e3a8a !important;
+    letter-spacing: 0.5px;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+    color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main .col-md-10 {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+/* ===== FIX NAVBAR VISIBILITY + OVERLAP ===== */
+
+.navbar {
+    background: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+
+/* Make nav links visible and spaced */
+.navbar .nav-link {
+    color: #1f2937 !important;
+    font-weight: 500;
+    padding: 10px 14px;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+    color: #2563eb !important;
+}
+
+/* Active/brand fix */
+.navbar-brand {
+    color: #1e3a8a !important;
+}
+
+/* Prevent content overlap under navbar */
+body {
+    padding-top: 70px;
+}
+/* ===== REMOVE BULLETS FROM NAVBAR ===== */
+.navbar ul li::before {
+    content: none !important;
+}
+/* space below navbar */
+body{
+    padding-top: 80px;
+}
+
+/* space above resume card */
+main .col-md-10 {
+    margin-top: 10px;
+}
